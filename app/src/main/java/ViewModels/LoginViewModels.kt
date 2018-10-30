@@ -1,22 +1,28 @@
 package ViewModels
 
 import Interface.IonClick
+import Library.Validate
 import Models.LoginModels
 import android.app.Activity
+import android.content.Intent
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import com.alejandro.tiendakotlin.R
+import com.alejandro.tiendakotlin.VerificarPassword
 import com.alejandro.tiendakotlin.databinding.ActivityVerificarEmailBinding
+import com.alejandro.tiendakotlin.databinding.ActivityVerificarPasswordBinding
 
-class LoginViewModels(activity : Activity, bindingEmail : ActivityVerificarEmailBinding) : LoginModels(), IonClick {
+class LoginViewModels(activity: Activity, bindingEmail: ActivityVerificarEmailBinding?, bindingPassword: ActivityVerificarPasswordBinding?) : LoginModels(), IonClick {
 
     private var _activity : Activity? = null
     private var _bindingEmail : ActivityVerificarEmailBinding? = null
+    private var _bindingPassword : ActivityVerificarPasswordBinding? = null
 
     init {
         _activity = activity;
         _bindingEmail = bindingEmail
+        _bindingPassword = bindingPassword
     }
 
     override fun onClick(view: View) {
@@ -42,13 +48,14 @@ class LoginViewModels(activity : Activity, bindingEmail : ActivityVerificarEmail
         if(cancel){
             focusView!!.requestFocus()
         }else{
-            Toast.makeText(_activity, emailUI.getValue(), Toast.LENGTH_SHORT).show()
+            _activity!!.startActivity(Intent(_activity, VerificarPassword::class.java))
+            _activity!!.overridePendingTransition(R.anim.left_in, R.anim.left_out)
+            //Toast.makeText(_activity, emailUI.getValue(), Toast.LENGTH_SHORT).show()
         }
 
     }
 
     private fun isEmailvalid(email : String) : Boolean {
-
-        return true
+        return Validate.isEmail(email)
     }
 }
