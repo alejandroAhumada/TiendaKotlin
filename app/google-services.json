@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "316692146315",
+    "firebase_url": "https://tienda-kotlin.firebaseio.com",
+    "project_id": "tienda-kotlin",
+    "storage_bucket": "tienda-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316692146315:android:da03472aa9cf4279",
+        "android_client_info": {
+          "package_name": "com.alejandro.tiendakotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316692146315-51gbjb0mnmq78lqdlqueqjdj49muviqu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alejandro.tiendakotlin",
+            "certificate_hash": "29e2f9a29b0948ae406e2b98c1a0f558fd5046c2"
+          }
+        },
+        {
+          "client_id": "316692146315-09k85k38ijs2c53sr3lcki9v29p24t7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7yVuem3YDFwIiIfhjtsZNf0q_WVhHBu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316692146315-09k85k38ijs2c53sr3lcki9v29p24t7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
